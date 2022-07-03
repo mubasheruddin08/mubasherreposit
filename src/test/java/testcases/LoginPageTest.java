@@ -28,6 +28,7 @@ public class LoginPageTest extends TestBase {
 	@Test
 
 	public void LoginPageGetTitle() {
+		loginPage.homepageLogin(prop.getProperty("username"), prop.getProperty("password"));
 		String actualRes = loginPage.validateLoginPageTitle();
 		assertEquals(actualRes, "Test");
 

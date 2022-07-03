@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-03T16:59:49Z" name="Default suite" finished-at="2022-07-03T16:59:57Z" duration-ms="8972">
+  <suite started-at="2022-07-03T17:13:53Z" name="Default suite" finished-at="2022-07-03T17:13:59Z" duration-ms="6291">
     <groups>
     </groups>
-    <test started-at="2022-07-03T16:59:49Z" name="Default test" finished-at="2022-07-03T16:59:57Z" duration-ms="8972">
+    <test started-at="2022-07-03T17:13:53Z" name="Default test" finished-at="2022-07-03T17:13:59Z" duration-ms="6291">
       <class name="testcases.LoginPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.LoginPageTest@14f9390f]" started-at="2022-07-03T16:59:49Z" name="setUp" finished-at="2022-07-03T16:59:57Z" duration-ms="8225" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.LoginPageTest@14f9390f]" started-at="2022-07-03T17:13:53Z" name="setUp" finished-at="2022-07-03T17:13:58Z" duration-ms="5378" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="LoginPageGetTitle()[pri:0, instance:testcases.LoginPageTest@14f9390f]" started-at="2022-07-03T16:59:57Z" name="LoginPageGetTitle" finished-at="2022-07-03T16:59:57Z" duration-ms="16" status="FAIL">
+        <test-method signature="LoginPageGetTitle()[pri:0, instance:testcases.LoginPageTest@14f9390f]" started-at="2022-07-03T17:13:58Z" name="LoginPageGetTitle" finished-at="2022-07-03T17:13:58Z" duration-ms="165" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [Test] but found [OrangeHRM]]]>
@@ -24,7 +24,7 @@ at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
 at org.testng.Assert.assertEquals(Assert.java:463)
-at testcases.LoginPageTest.LoginPageGetTitle(LoginPageTest.java:32)
+at testcases.LoginPageTest.LoginPageGetTitle(LoginPageTest.java:33)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -56,7 +56,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginPageGetTitle -->
-        <test-method is-config="true" signature="ternDown()[pri:0, instance:testcases.LoginPageTest@14f9390f]" started-at="2022-07-03T16:59:57Z" name="ternDown" finished-at="2022-07-03T16:59:57Z" duration-ms="710" status="PASS">
+        <test-method is-config="true" signature="ternDown()[pri:0, instance:testcases.LoginPageTest@14f9390f]" started-at="2022-07-03T17:13:58Z" name="ternDown" finished-at="2022-07-03T17:13:59Z" duration-ms="730" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ternDown -->
