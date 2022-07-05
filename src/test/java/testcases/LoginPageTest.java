@@ -30,6 +30,7 @@ public class LoginPageTest extends TestBase {
 	public void LoginPageGetTitle() throws InterruptedException {
 		loginPage.homepageLogin(prop.getProperty("username"), prop.getProperty("password"));
 		String actualRes = loginPage.validateLoginPageTitle();
+		
 		assertEquals(actualRes, "OrangeHRM");
 
 	}
