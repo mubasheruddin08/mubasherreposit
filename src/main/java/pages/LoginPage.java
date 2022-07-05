@@ -32,7 +32,7 @@ public class LoginPage extends TestBase{
 		
 		public void homepageLogin(String userName,String password) {
 			username_txt.sendKeys(userName);
-			username_txt.sendKeys(password);
+			password_txt.sendKeys(password);
 			login_btn.click();
 			
 		}
