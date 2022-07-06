@@ -19,7 +19,7 @@ public class LoginPageTest extends TestBase {
 
 	@BeforeMethod
 	public void setUp() {
-		//This initilization
+
 		initialization();
 		GetUrl(prop.getProperty("url"));
 		loginPage = new LoginPage();
@@ -28,10 +28,10 @@ public class LoginPageTest extends TestBase {
 	@Test
 
 	public void LoginPageGetTitle() throws InterruptedException {
-		//This Homepage
+
 		loginPage.homepageLogin(prop.getProperty("username"), prop.getProperty("password"));
 		String actualRes = loginPage.validateLoginPageTitle();
-		
+
 		assertEquals(actualRes, "OrangeHRM");
 
 	}

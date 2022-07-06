@@ -8,7 +8,7 @@ import base.TestBase;
 
 public class LoginPage extends TestBase{
 	
-	
+	//Web Elemnets
 	@FindBy(xpath ="//input[contains(@id,'txtUsername')]")
 	WebElement username_txt;
 	
