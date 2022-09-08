@@ -3,15 +3,23 @@ package util;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openxml4j.exceptions.InvalidFormatException;
+
+import com.google.gson.JsonObject;
 
 import base.TestBase;
 
@@ -59,4 +67,37 @@ public class TestUtil extends TestBase {
 		String currentDir = System.getProperty("user.dir");
 		FileUtils.copyFile(scrFile, new File(currentDir + "/screenshots/" + System.currentTimeMillis() + ".png"));
 	}
+
+	public static void writeToaJsonFile(String fileLoaction, String key, String value) {
+		JSONObject jsonObject = new JSONObject();
+		jsonObject.put(key, value);
+		try {
+			FileWriter writetiFile = new FileWriter(System.getProperty("user.dir") + "/jsonfile/" + fileLoaction);
+			writetiFile.write(jsonObject.toJSONString());
+			writetiFile.close();
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
+	}
+
+	public static String readFromaJsonFile(String filelocation, String getData) {
+		JSONParser jsonParser = new JSONParser();
+
+		String data = null;
+		try {
+			Object obj = jsonParser.parse(new FileReader(System.getProperty("user.dir") + "/jsonfile/" + filelocation));
+			JSONObject jsonObject = (JSONObject) obj;
+			data = (String) jsonObject.get(getData);
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		} catch (ParseException e) {
+
+			e.printStackTrace();
+		}
+		return data;
+
+	}
+
 }
