@@ -32,7 +32,7 @@ public class LoginPageTest extends TestBase {
 		loginPage.homepageLogin(prop.getProperty("username"),prop.getProperty("password"));
 		String actualRes = loginPage.validateLoginPageTitle();
 //added lines
-		assertEquals(actualRes, "OrangeHR");
+		assertEquals(actualRes, "OrangeHRM");
 	}
 
 	@AfterMethod()
