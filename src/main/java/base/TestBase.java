@@ -6,7 +6,9 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
@@ -39,7 +41,6 @@ public class TestBase {
 	}
 
 	public static void initialization() {
-
 		String browserName = prop.getProperty("browser");
 
 		if (browserName.equals("chrome")) {
@@ -73,5 +74,17 @@ public class TestBase {
 		driver.get(url);
 
 	}
+public void EnterText(WebElement elemet,String mytext) {
+	
+	elemet.sendKeys(mytext);
+	
+}
+
+public void SwitchToAlert() {
+	Alert alert=driver.switchTo().alert();
+	alert.accept();
+	
+}
+
 
 }
