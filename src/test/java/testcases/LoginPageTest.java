@@ -29,7 +29,7 @@ public class LoginPageTest extends TestBase {
 
 	public void LoginPageGetTitle() throws InterruptedException {
 
-		System.out.println("Test commit in framework in my");
+		System.out.println("Test commit in framework in");
 	}
 
 	@AfterMethod()
